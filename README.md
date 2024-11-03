@@ -5,7 +5,7 @@
 A project to automate the creation of multiple Spotify playlists using Terraform. This project uses the Spotify API and Terraform to streamline the playlist creation process, allowing you to manage playlists as code.
 
 
-1. **`Introduction`**: This project demonstrates how to use Terraform to create and manage Spotify playlists programmatically. By defining playlists and their tracks in configuration files, users can automate playlist creation and make updates to Spotify in a more structured way.
+1. **`Introduction`**: This project demonstrates how to use Terraform to create and manage Spotify playlists programmatically using HCL. By defining playlists and their tracks in configuration files, users can automate playlist creation and make updates to Spotify in a more structured way.
 
 
 2. **`Features`**:
@@ -16,9 +16,14 @@ A project to automate the creation of multiple Spotify playlists using Terraform
 3. **`Requirements`**:
    - Spotify Developer Account: You’ll need to create a Spotify app to get the necessary credentials.
    - Terraform: Make sure Terraform is installed on your machine.
+   - Docker:  Make sure Docker is installed on your machine.
    - Spotify API Credentials: Client ID, Client Secret, and a valid Redirect URI for Spotify authentication.
 
-4. **`Run the Pipeline`**: Save the job configuration and run the pipeline to see the file operations in action.
+4. **`Run the Pipeline`**: Save the job configuration and run the command to enable the port 27228 od docker container
+   ```
+   docker run --rm -it -p 27228:27228 --env-file ./.env ghcr.io/conradludgate/spotify-auth-proxy
+   ```
+
 
 ### Setup
 
@@ -29,19 +34,20 @@ A project to automate the creation of multiple Spotify playlists using Terraform
    
 2. **`Clone the Repo:`**
 ```
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Gokhul26/Playlist-Creation-with-Terraform.git
+cd Playlist-Creation-with-Terraform
 ```
 3. **`Configure Environment Variables:`**
   - Set up environment variables for your Spotify credentials
 ```
-export SPOTIFY_CLIENT_ID="your-client-id"
-export SPOTIFY_CLIENT_SECRET="your-client-secret"
-export SPOTIFY_REDIRECT_URI="your-redirect-uri"
+ SPOTIFY_CLIENT_ID="your-client-id"
+ SPOTIFY_CLIENT_SECRET="your-client-secret"
+ SPOTIFY_REDIRECT_URI="your-redirect-uri"
 ```
 4. **`Initialize Terraform`**: 
 ```
 terraform init
+terraform plan
 ```
 
 ### Usage
@@ -49,7 +55,7 @@ terraform init
 1. **`Apply Terraform Configuration:`**
    - Run the following command to create playlists:
 ```
-terraform apply
+terraform apply -auto-approve
 ```
 Confirm the creation and view the output to see the newly created playlists on your Spotify account.
 
