@@ -21,7 +21,7 @@ A project to automate the creation of multiple Spotify playlists using Terraform
 
 4. **`Run the Pipeline`**: Save the job configuration and run the command to enable the port 27228 od docker container
    ```
-   docker run --rm -it -p 27228:27228 --env-file ./.env ghcr.io/conradludgate/spotify-auth-proxy
+   docker run --rm -it -p 27228:27228 --env-file .env ghcr.io/conradludgate/spotify-auth-proxy
    ```
 
 
