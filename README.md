@@ -1,4 +1,4 @@
-# Playlist-Creation-with-Terraform
+# Automating-Playlist-Creation-with-Terraform
 
 ## Pipeline Usage Examples
 
