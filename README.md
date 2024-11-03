@@ -23,6 +23,10 @@ A project to automate the creation of multiple Spotify playlists using Terraform
    ```
    docker run --rm -it -p 27228:27228 --env-file .env ghcr.io/conradludgate/spotify-auth-proxy
    ```
+   ![Screenshot from 2024-11-03 18-23-43](https://github.com/user-attachments/assets/4d6ab2bd-bd86-4838-a0df-4a301753c381)
+
+   You would get a output like this if you open the Auth URL of your docker command.
+
 
 
 ### Setup
@@ -37,6 +41,9 @@ A project to automate the creation of multiple Spotify playlists using Terraform
 git clone https://github.com/Gokhul26/Playlist-Creation-with-Terraform.git
 cd Playlist-Creation-with-Terraform
 ```
+
+![image](https://github.com/user-attachments/assets/5e1f266c-a1cc-4fdd-ad4d-3f16f69b7743)
+
 3. **`Configure Environment Variables:`**
   - Set up environment variables for your Spotify credentials
 ```
@@ -58,6 +65,9 @@ terraform plan
 terraform apply -auto-approve
 ```
 Confirm the creation and view the output to see the newly created playlists on your Spotify account.
+
+![Screenshot from 2024-11-03 18-28-53](https://github.com/user-attachments/assets/0df5667f-f55f-4cbf-8b51-51748f9159bb)
+
 
 ### Configuration
 In your Terraform configuration files, you can specify details like:
